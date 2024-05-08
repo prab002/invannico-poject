@@ -14,7 +14,7 @@ function GetUser() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:9000/api/getall");
+        const response = await axios.get("https://invannico-poject.onrender.com/api/getall");
         setUsers(response.data);
       } catch (error) {
         console.error("Error fetching users:", error);
@@ -25,7 +25,7 @@ function GetUser() {
 
   const deletuser = async (userId) => {
     try {
-      await axios.delete(`http://localhost:9000/api/delete/${userId}`);
+      await axios.delete(`https://invannico-poject.onrender.com/api/delete/${userId}`);
       setUsers((prevUsers) => prevUsers.filter((user) => user._id !== userId));
     } catch (error) {
       console.log("Error deleting user:", error);

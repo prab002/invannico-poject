@@ -19,7 +19,7 @@ function Update() {
     };
 
     try {
-      await axios.put(`http://localhost:9000/api/update/${id}`, userData);
+      await axios.put(`https://invannico-poject.onrender.com/api/update/${id}`, userData);
       navigate("/");
     } catch (error) {
       console.error("Error:", error);
@@ -30,7 +30,7 @@ function Update() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:9000/api/getOne/${id}`
+          `https://invannico-poject.onrender.com/api/getOne/${id}`
         );
         setName(response.data.name);
         setEmail(response.data.email);

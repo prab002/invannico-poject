@@ -19,7 +19,7 @@ function Adduser() {
 
     try {
       const response = await axios.post(
-        "http://localhost:9000/api/create",
+        "https://invannico-poject.onrender.com/api/create",
         userData
       );
       navigate("/");
